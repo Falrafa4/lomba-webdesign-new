@@ -1,5 +1,15 @@
-alert ('Hi There, Welcome!')
-alert ('Indonesian Gold 2045')
-let nama = prompt('What is your name?')
-alert (`Hello, ${nama}!`)
-alert ('Are You Ready For It?')
+window.addEventListener('scroll', function() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+  
+    galleryItems.forEach(item => {
+      const itemTop = item.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+  
+      if (itemTop < windowHeight * 0.8) { 
+        item.classList.add('show');
+      } else {
+        item.classList.remove('show');
+      }
+    });
+  });
+  
