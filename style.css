@@ -44,12 +44,19 @@ header {
     background-position: bottom;
     color: white;
     height: 700px;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
     
 }
 
 header h1 {
     font-size: 70px;
     color: white;
+}
+
+h1 {
+    color: #065497;
+    
 }
 
 .header-main {
@@ -122,15 +129,28 @@ main {
 }
 
 .gallery-container {
-    display: flex;
+    display: grid;
     padding: 15px;
+    gap: 30px;
 }
 
 .gallery-container img {
-    display: flex;
+    display: grid;
     height: 250px;
     width: 450px;
     border-radius: 5px;
+}
+
+.gallery-container .gallery-1{
+    transform: translateX(-300px);
+}
+
+.gallery-container .gallery-2{
+    transform: translateX(-150px);
+}
+
+.gallery-container .gallery-3{
+    transform: translateX(150px);
 }
 
 .footer-bio {
@@ -146,4 +166,8 @@ main {
     background-color: #021526;
     padding: 10px;
     width: 100%;
+}
+
+main{
+    background-color: rgb(0, 0, 0);
 }
