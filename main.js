@@ -1,0 +1,5 @@
+alert ('Hi There, Welcome!')
+alert ('Indonesian Gold 2045')
+let nama = prompt('What is your name?')
+alert (`Hello, ${nama}!`)
+alert ('Are You Ready For It?')

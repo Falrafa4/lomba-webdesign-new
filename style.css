@@ -1,0 +1,149 @@
+* {
+    margin: auto;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    text-align: center;
+    padding: 30px;
+    background-color: #021526;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+nav a:hover {
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    transition: .5s ease-in-out;
+}
+
+.main-header {
+    background-color: rgba(0, 0, 0, 0.36);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-image: url(images/header.jpg);
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    height: 700px;
+    
+}
+
+header h1 {
+    font-size: 70px;
+    color: white;
+}
+
+.header-main {
+    text-align: center;
+    padding: 200px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.header-main h1 {
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+}
+
+.header-main p {
+    letter-spacing: 7px;
+    margin-top: 15px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.header-description {
+    text-align: justify;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.header-hr {
+    width: 100%;
+    margin: 10px auto;
+}
+
+main {
+    text-align: center;
+    padding: 15px;
+}
+
+.main-hr {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.main-gallery {
+    padding: 15px;
+
+}
+
+.main-gallery button {
+    margin-top: 10px;
+    width: 450px;
+    background-color: white;
+    color: #021526;
+    border: 1px solid rgb(53, 53, 53);
+    border-radius: 5px;
+    padding: 10px;
+    transition: 1s;
+}
+
+.main-gallery button:hover {
+    background-color: #021526;
+    border: 1px solid white;
+    width: 96%;
+    cursor: pointer;
+    color: white;
+    transition: 1s;
+}
+
+.gallery-container {
+    display: flex;
+    padding: 15px;
+}
+
+.gallery-container img {
+    display: flex;
+    height: 250px;
+    width: 450px;
+    border-radius: 5px;
+}
+
+.footer-bio {
+    display: flex;
+    justify-content: space-between;
+    background-color: #021526;
+    color: white;
+    padding: 30px;
+}
+
+.footer-copyright {
+    color: white;
+    background-color: #021526;
+    padding: 10px;
+    width: 100%;
+}
