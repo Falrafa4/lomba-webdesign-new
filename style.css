@@ -18,6 +18,7 @@ nav {
     position: sticky;
     top: 0;
     bottom: 0;
+    z-index: 1000;
 }
 
 .logo, .navbar {
@@ -46,12 +47,13 @@ nav {
     text-decoration: none;
     color: #e1e7ff;
     padding: 2.5vh 20px;
+    transition: all .5s ease;
 }
 
 .navbar ul li a:hover {
     background-color: #ffffff;
     color: #021526;
-    transition: .5s ease-in-out;
+    transition: all .5s ease;
 }
 
 .main-header {
@@ -109,17 +111,16 @@ h1 {
     background-color: white;
     border-radius: 5px;
     padding: 10px 30px;
-    transition: 0.5s;
+    transition: all 0.5s ease-out;
 }
 
 .header-main a:hover {
     -webkit-box-shadow:0px 0px 62px 0px rgba(255,255,255,0.8);
--moz-box-shadow: 0px 0px 62px 0px rgba(255,255,255,0.8);
-box-shadow: 0px 0px 62px 0px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 62px 0px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 62px 0px rgba(255,255,255,0.8);
     border: 1px solid white;
     background-color: transparent;
     color: white;
-    transition: 0.5s;
 }
 
 .header-description {
@@ -139,6 +140,7 @@ box-shadow: 0px 0px 62px 0px rgba(255,255,255,0.8);
 }
 
 main {
+    background-color: rgb(0, 0, 0);
     text-align: center;
     padding: 15px;
 }
@@ -149,28 +151,28 @@ main {
 }
 
 .main-gallery {
-    padding: 15px;
+    padding: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.gallery-1 img:hover, .gallery-2 img:hover, .gallery-3 img:hover {
-    -webkit-box-shadow:0px 0px 129px 0px rgba(255,255,255,0.8);
--moz-box-shadow: 0px 0px 129px 0px rgba(255,255,255,0.8);
-box-shadow: 0px 0px 129px 0px rgba(255,255,255,0.8);
-    transition: 0.5s;
-    transform: scale(1.05);
-}
-
-div img {
+.gallery-container div img {
     transition: 0.5s;
     margin: 10px 0px;
 }
 
+.gallery-1 img:hover, .gallery-2 img:hover, .gallery-3 img:hover {
+    -webkit-box-shadow:0px 0px 129px 0px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 129px 0px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 129px 0px rgba(255,255,255,0.8);
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+
 .main-gallery button {
-    margin-top: 10px;
+    margin-top: 15px;
     width: 30%;
     background-color: white;
     color: #021526;
@@ -216,14 +218,14 @@ div img {
 }
 
 .gallery-item { 
-  opacity: 0;
-  transform: translateY(50px); 
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
 }
 
 .gallery-item.show { 
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .footer-bio {
@@ -232,12 +234,25 @@ div img {
     color: white;
     padding: 30px 100px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .footer-bio h3 {
     font-size: 1.5rem;
 }
+
+.footer-contact, .footer-about {
+    line-height: 1.7;
+}
+
+.footer-contact ul, .footer-bio p {
+    margin-top: 7px;
+}
+
+.footer-contact ul li {
+    list-style-type: none;
+}
+
 
 .footer-about p {
     margin-bottom: 10px;
@@ -251,7 +266,7 @@ div img {
     text-decoration: none;
     font-size: 0.8rem;
     padding: 5px 20px;
-    transition: 0.5s;
+    transition: all 0.4s ease;
 }
 
 .footer-about a:hover {
@@ -266,8 +281,4 @@ div img {
     padding: 20px 0px;
     width: 100%;
     text-align: center;
-}
-
-main{
-    background-color: rgb(0, 0, 0);
 }
