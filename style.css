@@ -6,6 +6,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 nav {
     background-color: #021526;
     display: flex;
