@@ -66,10 +66,6 @@ nav {
     justify-content: center;
 }
 
-.header-main {
-    height: 260px;
-}
-
 header {
     background-image: url(images/header.jpg);
     background-size: cover;
@@ -92,8 +88,8 @@ h1 {
 .header-main {
     text-align: center;
     padding: 200px;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .header-main h1 {
@@ -119,9 +115,9 @@ h1 {
 }
 
 .header-main a:hover {
-    -webkit-box-shadow:0px 0px 62px 0px rgba(255,255,255,0.8);
-    -moz-box-shadow: 0px 0px 62px 0px rgba(255,255,255,0.8);
-    box-shadow: 0px 0px 62px 0px rgba(255,255,255,0.8);
+    -webkit-box-shadow:0px 0px 42px 0px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 42px 0px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 42px 0px rgba(255,255,255,0.8);
     border: 1px solid white;
     background-color: transparent;
     color: white;
@@ -165,13 +161,9 @@ main {
 
 .gallery-container div img {
     transition: 0.5s;
-    margin: 10px 0px;
 }
 
-.gallery-1 img:hover, .gallery-2 img:hover, .gallery-3 img:hover {
-    -webkit-box-shadow:0px 0px 129px 0px rgba(255,255,255,0.8);
-    -moz-box-shadow: 0px 0px 129px 0px rgba(255,255,255,0.8);
-    box-shadow: 0px 0px 129px 0px rgba(255,255,255,0.8);
+.gallery-container img:hover {
     transition: 0.5s;
     transform: scale(1.05);
 }
@@ -197,29 +189,27 @@ main {
 }
 
 .gallery-container {
-    display: grid;
+    display: flex;
     padding: 15px;
-    gap: 30px;
 }
 
 .gallery-container img {
-    display: grid;
     height: 250px;
     width: 450px;
     border-radius: 5px;
+    margin: 20px;
 }
 
 .gallery-container .gallery-1{
-    transform: translateX(-150px);
-    
+    transform: translateY(-150px);
 }
 
 .gallery-container .gallery-2{
-    transform: translateX(150px);
+    transform: translateY(-150px);
 }
 
 .gallery-container .gallery-3{
-    transform: translateX(-150px);
+    transform: translateY(-150px);
 }
 
 .gallery-item { 
@@ -286,4 +276,33 @@ main {
     padding: 20px 0px;
     width: 100%;
     text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery-container {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .gallery-container .gallery-1{
+        transform: translateX(-150px);
+    }
+    
+    .gallery-container .gallery-2{
+        transform: translateX(150px);
+    }
+    
+    .gallery-container .gallery-3{
+        transform: translateX(-150px);
+    }
+    .gallery-item { 
+        opacity: 0;
+        transform: translateY(50px); 
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+    }
+    
+    .gallery-item.show { 
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
