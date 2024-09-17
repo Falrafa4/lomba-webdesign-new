@@ -5,6 +5,7 @@
     padding: 0;
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
@@ -16,14 +17,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    bottom: 0;
+    position: fixed;
     z-index: 1000;
+    width: 100vw;
 }
 
 .logo, .navbar {
-    margin: 0px 100px;
+    margin: 0px 6rem;
 }
 
 .logo a {
@@ -66,12 +66,15 @@ nav {
     justify-content: center;
 }
 
+.header-main {
+    height: 260px;
+}
+
 header {
     background-image: url(images/header.jpg);
     background-size: cover;
-    background-position: bottom;
     color: white;
-    height: 92vh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: darken;
 }
@@ -130,6 +133,7 @@ h1 {
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 20px;
+    margin-top: 80px;
     line-height: 30px;
     letter-spacing: 2px;
     color: white;
