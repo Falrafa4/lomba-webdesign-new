@@ -169,6 +169,14 @@ main {
 }
 
 .main-gallery button {
+    border: none;
+    background-color: transparent;
+}
+
+.main-gallery a, article a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem;
     margin-top: 15px;
     width: 30%;
     background-color: white;
@@ -179,7 +187,7 @@ main {
     transition: 1s;
 }
 
-.main-gallery button:hover {
+.main-gallery a:hover, article a:hover {
     background-color: transparent;
     border: 1px solid white;
     width: 100%;
