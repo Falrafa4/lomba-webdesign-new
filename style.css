@@ -47,7 +47,7 @@ nav {
 .navbar ul li a {
     text-decoration: none;
     color: #e1e7ff;
-    padding: 2.5vh 20px;
+    padding: 2.5vh 25px;
     transition: all .5s ease;
 }
 
@@ -59,11 +59,12 @@ nav {
 
 .main-header {
     background-color: rgba(0, 0, 0, 0.36);
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 header {
@@ -86,7 +87,6 @@ h1 {
 }
 
 .header-main {
-    text-align: center;
     padding: 200px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -106,12 +106,13 @@ h1 {
 }
 
 .header-main a {
+    position: relative;
     text-decoration: none;
     color: black;
     background-color: white;
     border-radius: 5px;
     padding: 10px 30px;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease;
 }
 
 .header-main a:hover {
@@ -121,10 +122,11 @@ h1 {
     border: 1px solid white;
     background-color: transparent;
     color: white;
+    transition: all 0.5s ease;
 }
 
 .header-description {
-    text-align: justify;
+    text-align: center;
     padding: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -135,9 +137,65 @@ h1 {
     color: white;
 }
 
+.header-description a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    width: 40%;
+    background-color: white;
+    color: #021526;
+    border: 1px solid rgb(53, 53, 53);
+    border-radius: 5px;
+    padding: 10px;
+    transition: 1s;
+}
+
+.article-content {
+    text-align: justify;
+}
+
 .header-hr {
     width: 100%;
     margin: 10px auto;
+}
+
+.animation-arrow-down {
+    position: absolute;
+    top: 85%;
+    left: 49.7%;
+    transform: translate(-60%, 0%) rotate(45deg);
+    font-size: 25px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    -webkit-animation: fade_move_down 4s ease-in-out infinite;
+    -moz-animation: fade_move_down 4s ease-in-out infinite;
+    animation: fade_move_down 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes fade_move_down {
+    0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+@-moz-keyframes fade_move_down {
+    0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+@keyframes fade_move_down {
+    0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
 
 main {
@@ -152,7 +210,7 @@ main {
 }
 
 .main-gallery {
-    padding: 35px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,10 +231,12 @@ main {
     background-color: transparent;
 }
 
-.main-gallery a, article a {
+.main-gallery a {
+    display: inline-block;
     text-align: center;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
     margin-top: 15px;
     width: 30%;
     background-color: white;
@@ -187,10 +247,28 @@ main {
     transition: 1s;
 }
 
-.main-gallery a:hover, article a:hover {
+.main-gallery a, .header-description a {
+    background-color: white;
+    color: #021526;
+    border: 1px solid rgb(53, 53, 53);
+    border-radius: 5px;
+    padding: 10px;
+    transition: 1s;
+}
+
+.main-gallery a:hover {
     background-color: transparent;
     border: 1px solid white;
-    width: 100%;
+    width: 98.6%;
+    cursor: pointer;
+    color: white;
+    transition: 1s;
+}
+
+.header-description a:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    width: 98.4%;
     cursor: pointer;
     color: white;
     transition: 1s;
@@ -198,7 +276,7 @@ main {
 
 .gallery-container {
     display: flex;
-    padding: 15px;
+    padding: 5px;
 }
 
 .gallery-container img {
@@ -287,20 +365,42 @@ main {
 }
 
 @media only screen and (max-width: 768px) {
+    .logo, .navbar {
+        margin: 0 10px;
+        padding: 0;
+    }
+
+    .logo {
+        padding: 0 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+    .animation-arrow-down {
+        left: 49%;
+    }
+
     .gallery-container {
         display: flex;
         flex-direction: column;
-        padding: 15px;
     }
-    .gallery-container .gallery-1{
+
+    .gallery-1 img, .gallery-2 img, .gallery-3 img {
+        width: 440px;
+    }
+
+    .gallery-container .gallery-1 {
         transform: translateX(-150px);
     }
     
-    .gallery-container .gallery-2{
+    .gallery-container .gallery-2 {
         transform: translateX(150px);
     }
     
-    .gallery-container .gallery-3{
+    .gallery-container .gallery-3 {
         transform: translateX(-150px);
     }
     .gallery-item { 
@@ -312,5 +412,41 @@ main {
     .gallery-item.show { 
         opacity: 1;
         transform: translateY(0);
+    }
+    
+    .main-gallery a:hover {
+        width: 105%;
+    }
+
+    .header-description a:hover {
+        width: 90%;
+    }
+
+    .footer-bio {
+        padding: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .footer-contact {
+        width: 200px;
+        font-size: 12px;
+        padding: 2px;
+    }
+    
+    .footer-about {
+        font-size: 12px;
+        width: 200px;
+        padding: 2px;
+        padding-bottom: 5px;
+    }
+
+    .footer-about a {
+        padding: 2px 20px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+        padding: 10px;
     }
 }
