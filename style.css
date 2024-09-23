@@ -24,12 +24,14 @@ nav {
 }
 
 .logo, .navbar {
-    margin: 0px 6rem;
+    margin: 0px 1.5rem; /* icitynya kejauhan jaraknya sama a nya jg bang*/
+    margin-right: 0px;
 }
 
 .logo a {
     text-decoration: none;
     color: white;
+    font-size: 17px; /* gedein font dikit */
 }
 
 .navbar ul {
@@ -42,7 +44,7 @@ nav {
     height: 8vh;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center; 
 }
 
 .navbar ul li a {
@@ -113,6 +115,8 @@ nav {
     transition: all 1s;
 }
 
+/* side bar ga perlu hover karena ga akan kepakek (optimize) */
+
 
 .sidebar-list ul li a {
     text-decoration: none;
@@ -122,10 +126,6 @@ nav {
     display: block;
     transition: all 0.5s;
     transform-origin: left;
-}
-
-.sidebar-list ul li a:hover {
-    transform: scale(1.1);
 }
 
 .close-btn {
