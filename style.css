@@ -24,14 +24,14 @@ nav {
 }
 
 .logo, .navbar {
-    margin: 0px 1.5rem; /* icitynya kejauhan jaraknya sama a nya jg bang*/
+    margin: 0px 1.5rem;
     margin-right: 0px;
 }
 
 .logo a {
     text-decoration: none;
     color: white;
-    font-size: 17px; /* gedein font dikit */
+    font-size: 17px;
 }
 
 .navbar ul {
@@ -50,7 +50,9 @@ nav {
 .navbar ul li a {
     text-decoration: none;
     color: #e1e7ff;
-    padding: 2.5vh 25px;
+    width: 7rem;
+    padding: 8vh 0;
+    text-align: center;
     transition: all .5s ease;
 }
 

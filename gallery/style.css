@@ -42,13 +42,15 @@ nav {
     height: 8vh;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center; 
 }
 
 .navbar ul li a {
     text-decoration: none;
     color: #e1e7ff;
-    padding: 2.5vh 25px;
+    width: 7rem;
+    padding: 8vh 0;
+    text-align: center;
     transition: all .5s ease;
 }
 
