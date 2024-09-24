@@ -116,22 +116,17 @@ nav {
 
 .sidebar-list ul li {
     margin: 10px 0;
+    position: relative;
     transition: all 1s;
 }
 
 
 .sidebar-list ul li a {
+    display: block;
     text-decoration: none;
     color: white;
     font-size: 14px;
     padding: 10px;
-    display: block;
-    transition: all 0.5s;
-    transform-origin: left;
-}
-
-.sidebar-list ul li a:hover {
-    transform: scale(1.1);
 }
 
 .close-btn {
