@@ -24,9 +24,9 @@ nav {
 }
 
 .logo, .navbar {
-    margin: 0px 6rem;
+    margin: 0px 1.5rem;
+    margin-right: 0px;
 }
-
 .logo a {
     text-decoration: none;
     color: white;
