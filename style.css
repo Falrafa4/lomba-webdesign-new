@@ -142,6 +142,10 @@ nav {
     text-align: center;
 }
 
+iframe {
+    width: 900px;
+}
+
 header {
     color: white;
     height: 100vh;
@@ -159,9 +163,9 @@ h1 {
 }
 
 .header-main {
-    padding: 200px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin: 0 50px;
+    padding: 50px;
+    text-align: left;
 }
 
 .header-main h1 {
