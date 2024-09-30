@@ -187,6 +187,7 @@ h1 {
     color: black;
     background-color: white;
     border-radius: 5px;
+    border: 1px solid white;
     padding: 10px 30px;
     transition: all 0.5s ease;
 }
