@@ -135,22 +135,17 @@ nav {
 }
 
 .main-header {
-    background-color: rgba(0, 0, 0, 0.36);
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
 header {
-    background-image: url(images/header.jpg);
-    background-size: cover;
     color: white;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
-    background-blend-mode: darken;
+    background-color: #000f1a;
 }
 
 header h1 {
