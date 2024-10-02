@@ -74,3 +74,14 @@ document.addEventListener("DOMContentLoaded", function() {
       observer.observe(mainGalleryLink);
   }
 });
+
+var prevScrollpos = window.scrollY;
+window.onscroll = function() {
+  var currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("nav").style.top = "0";
+  } else {
+    document.getElementById("nav").style.top = "-11.5vh";
+  }
+  prevScrollpos = currentScrollPos;
+}

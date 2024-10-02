@@ -14,13 +14,17 @@
 }
 
 nav {
-    background-color: #021526;
+    /* background-color: #021526; */
+    /* background-color: #d2c100; */
+    background-color: transparent;
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 2;
+    /* z-index: 2; */
     width: 100vw;
+    transition: top 1s;
 }
 
 .logo, .navbar {
@@ -30,7 +34,7 @@ nav {
 
 .logo a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 17px;
 }
 
@@ -41,7 +45,7 @@ nav {
 }
 
 .navbar ul li {
-    height: 8vh;
+    height: 11.5vh;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -49,7 +53,7 @@ nav {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #e1e7ff;
+    color: white;
     width: 7rem;
     padding: 8vh 0;
     text-align: center;
@@ -58,7 +62,7 @@ nav {
 
 .navbar ul li a:hover {
     background-color: #ffffff;
-    color: #021526;
+    color: black;
     transition: all .5s ease;
 }
 
@@ -150,6 +154,9 @@ header {
     color: white;
     height: 100vh;
     background-color: #000f1a;
+    background-image: url(images/header.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 header h1 {
@@ -165,7 +172,7 @@ h1 {
 .header-main {
     margin: 0 50px;
     padding: 50px;
-    text-align: left;
+    text-align: center;
 }
 
 .header-main h1 {
@@ -204,9 +211,7 @@ h1 {
 
 .header-description {
     text-align: center;
-    margin: 100px;
-    margin-top: 120px;
-    margin-bottom: 120px;
+    margin: 80px 100px;
     line-height: 40px;
     letter-spacing: 2px;
     color: white;
@@ -238,7 +243,7 @@ h1 {
 
 .animation-arrow-down {
     position: absolute;
-    top: 85%;
+    top: 75%;
     left: 49.68%;
     transform: translate(-50%, 0%) rotate(45deg);
     font-size: 25px;

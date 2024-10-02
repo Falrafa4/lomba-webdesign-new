@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <title>Home - SidoCrime</title>
-    <!-- <style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style> -->
+    <title>SidoCrime</title>
+    <style>
+        iframe {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
+    <nav id="nav">
         <button class="toggleSidebar" id="toggleSidebar">☰</button>
         <div class="logo">
             <a href="#"><h1>SidoCrime</h1></a>
@@ -19,8 +23,7 @@
 
         <div class="navbar">
             <ul>
-                <li><a href="/lomba-webdesign-new/plans/plans.html" id="plans">Tracking</a></li>
-                <li><a href="/lomba-webdesign-new/gallery/gallery.html" id="gallery">Gallery</a></li>
+                <li><a href="#tracking" id="plans">Tracking</a></li>
                 <li><a href="/lomba-webdesign-new/contact/contact.html" id="contact">Contact</a></li>
                 <li><a href="/lomba-webdesign-new/about/about.html" id="about">About</a></li>
             </ul>
@@ -34,8 +37,7 @@
     
             <div class="sidebar-list">
                 <ul>
-                    <li><a href="/lomba-webdesign-new/plans/plans.html" id="plans">Tracking</a></li>
-                    <li><a href="/lomba-webdesign-new/gallery/gallery.html" id="gallery">Gallery</a></li>
+                    <li><a href="#tracking" id="plans">Tracking</a></li>
                     <li><a href="/lomba-webdesign-new/contact/contact.html" id="contact">Contact</a></li>
                     <li><a href="/lomba-webdesign-new/about/about.html" id="about">About</a></li>
                 </ul>
@@ -45,16 +47,10 @@
 
     <header>
         <div class="main-header">
-            <div class="map">
-                <div class="embed-container">
-                    <iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="SDA-Zona" src="//www.arcgis.com/apps/Embed/index.html?webmap=efbbcc015ca94c94bab45ada7bd858d4&extent=112.339,-7.6995,113.1486,-7.272&zoom=false&previewImage=false&scale=false&disable_scroll=true&theme=light"></iframe>
-                    <figcaption>Sumber: Badan Pusat Statistik</figcaption>
-                </div>
-            </div>
             <div class="header-main">
                 <h1>Welcome</h1>
                 <hr>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, incidunt.</p>
                 <a href="#article" id="learn-more">See More</a>
             </div>
             <div class="animation-arrow-down"></div>
@@ -64,14 +60,18 @@
     <main>
         <article id="article">
             <div class="header-description">
-                <h1>What is SidoCrime?</h1>
+                <h1>What is Tracking Map?</h1>
                 <hr class="header-hr">
-                <p class="article-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium recusandae mollitia in labore similique facilis beatae eveniet veniam aliquid reprehenderit! Inventore earum voluptate, cupiditate quis saepe sed eos accusantium velit optio assumenda eum sunt fugit consequatur porro! Quos itaque expedita repudiandae facilis molestiae ducimus doloremque odit ut, animi corrupti sunt. Pellentesque sed nulla gravida, laoreet justo eget, tincidunt ante. Phasellus diam dolor, semper sit amet rhoncus in, placerat ut risus. Nulla efficitur, ante ac feugiat maximus, risus dolor condimentum metus, hendrerit pharetra ante est vel augue. Sed felis enim, consequat non justo id, gravida ullamcorper neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce semper molestie imperdiet. Quisque hendrerit ullamcorper tellus sit amet hendrerit. Proin sit amet dictum tellus, euismod rhoncus odio. Duis dictum neque eu quam sagittis, a viverra nibh suscipit. Nullam id faucibus mi, et condimentum metus. Aliquam sodales leo vel metus lobortis varius. Integer mauris velit, sodales in metus semper, maximus posuere velit.</p><br>
-                <a href="plans/plans.html">See Full Tracking Map</a>
+                <p class="article-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur atque exercitationem ex non dolorum ipsam nostrum, suscipit tenetur id qui provident, quisquam explicabo voluptatum beatae quibusdam sint neque corporis perspiciatis minus temporibus accusamus nihil modi delectus. Aperiam et quod consectetur.</p><br>
+                <div class="map" id="tracking">
+                    <iframe height="700" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="SDA-Zona" src="//www.arcgis.com/apps/Embed/index.html?webmap=efbbcc015ca94c94bab45ada7bd858d4&extent=112.339,-7.6995,113.1486,-7.272&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&disable_scroll=false&theme=dark" style="border-radius:20px;"></iframe>
+                    <figcaption>Source: Badan Pusat Statistik</figcaption>
+                </div>
+                
             </div>
         </article>
 
-        <div class="main-gallery">
+        <!-- <div class="main-gallery">
             <h1>Gallery</h1>
             <div class="gallery-container">
                 <div class="gallery-1 gallery-item">
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <a href="gallery/gallery.html">See More</a>
-        </div>
+        </div> -->
     </main>
 
     <footer>
