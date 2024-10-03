@@ -6,7 +6,6 @@
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
-    /* border: solid red; */
 }
 
 *::-webkit-scrollbar {
@@ -14,17 +13,14 @@
 }
 
 nav {
-    /* background-color: #021526; */
-    /* background-color: #d2c100; */
     background-color: transparent;
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    /* z-index: 2; */
     width: 100vw;
-    transition: top 1s;
+    transition: top 0.6s;
 }
 
 .logo, .navbar {
@@ -45,7 +41,6 @@ nav {
 }
 
 .navbar ul li {
-    height: 11.5vh;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -55,7 +50,7 @@ nav {
     text-decoration: none;
     color: white;
     width: 7rem;
-    padding: 8vh 0;
+    padding: 3vh 0;
     text-align: center;
     transition: all .5s ease;
 }
@@ -68,9 +63,9 @@ nav {
 
 .toggleSidebar {
     display: none;
-    padding: 5px 5px;
+    padding: 0 5px;
     font-size: 24px;
-    background-color: #021526;
+    background-color: transparent;
     color: white;
     border: none;
     cursor: pointer;
@@ -89,8 +84,8 @@ nav {
     left: -150px;
     background-color: #021526;
     transition: left 0.3s ease;
-    z-index: 10;
     overflow: hidden;
+    z-index: 10;
 }
 
 .sidebar-header {
@@ -146,10 +141,6 @@ nav {
     text-align: center;
 }
 
-iframe {
-    width: 900px;
-}
-
 header {
     color: white;
     height: 100vh;
@@ -170,8 +161,8 @@ h1 {
 }
 
 .header-main {
-    margin: 0 50px;
-    padding: 50px;
+    width: 90%;
+    padding: 50px 0;
     text-align: center;
 }
 
@@ -211,7 +202,8 @@ h1 {
 
 .header-description {
     text-align: center;
-    margin: 80px 100px;
+    width: 80%;
+    margin: 5vw 10vw;
     line-height: 40px;
     letter-spacing: 2px;
     color: white;
@@ -284,59 +276,6 @@ main {
     padding: 15px;
 }
 
-.main-hr {
-    width: 95%;
-    margin: 0 auto;
-}
-
-.main-gallery {
-    padding: 0;
-    margin: 20px;
-    margin-bottom: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.gallery-container div img {
-    transition: 0.5s;
-}
-
-.gallery-container img:hover {
-    transition: 0.5s;
-    transform: scale(1.05);
-}
-
-.main-gallery button {
-    border: none;
-    background-color: transparent;
-}
-
-.main-gallery a {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    width: 430px;
-    background-color: white;
-    color: #021526;
-    border: 1px solid rgb(53, 53, 53);
-    border-radius: 5px;
-    padding: 10px;
-    transition: 1s;
-}
-
-.main-gallery a:hover {
-    background-color: transparent;
-    border: 1px solid white;
-    width: 96%;
-    cursor: pointer;
-    color: white;
-    transition: 1s;
-}
-
 .header-description a:hover {
     background-color: transparent;
     border: 1px solid white;
@@ -346,38 +285,22 @@ main {
     transition: 1s;
 }
 
-.gallery-container {
-    display: flex;
+.iframe-map {
+    border-radius:20px; 
+    width: 80%;
+    height: 600px;
 }
 
-.gallery-container img {
-    height: 250px;
-    width: 450px;
-    border-radius: 5px;
+.map h1 {
+    color: white;
     margin: 20px;
 }
 
-.gallery-container .gallery-1{
-    transform: translateY(-150px);
-}
-
-.gallery-container .gallery-2{
-    transform: translateY(-150px);
-}
-
-.gallery-container .gallery-3{
-    transform: translateY(-150px);
-}
-
-.gallery-item { 
-    opacity: 0;
-    transform: translateY(50px); 
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
-}
-
-.gallery-item.show { 
-    opacity: 1;
-    transform: translateY(0);
+figcaption {
+    margin: 15px;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 1rem;
 }
 
 .footer-bio {
@@ -395,7 +318,7 @@ main {
 
 .footer-contact, .footer-about {
     padding: 10px;
-    line-height: 1.5;
+    line-height: 1.7;
     width: 450px;
 }
 
@@ -465,6 +388,16 @@ main {
 
     .sidebar.open {
         left: 0;
+        display: block;
+    }
+
+    .header-main h1 {
+        font-size: 3rem;
+        color: white;
+    }
+
+    .header-main p {
+        font-size: 0.9rem;
     }
 
     .animation-arrow-down {
@@ -472,10 +405,8 @@ main {
     }
 
     .header-description {
-        padding: 0;
-        padding-top: 120px;
-        padding-bottom: 50px;
-        margin: 0;
+        width: 90%;
+        margin: 20px auto;
     }
 
     .article-content {
@@ -483,56 +414,20 @@ main {
         font-size: 15px;
     }
 
-    .main-gallery {
-        margin: 0;
-        padding: 0;
-        padding-top: 50px;
-        padding-bottom: 50px;
+    .map {
+        margin: 0 auto;
+        width: 100%;
     }
 
-    .main-gallery a, .header-description a {
-        width: 150px;
-    }
-    .header-description a:hover {
-        width: 99%;
+    .map h1 {
+        margin: 50px 0;
+        margin-bottom: 10px;
     }
 
-    .main-gallery a:hover {
-        width: 83%;
-    }
-
-    .gallery-container {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    .gallery-1 img, .gallery-2 img, .gallery-3 img {
-        width: 90%;
-        height: 90%;
-    }
-
-    .gallery-container .gallery-1 {
-        transform: translateX(-150px);
-    }
-    
-    .gallery-container .gallery-2 {
-        transform: translateX(150px);
-    }
-    
-    .gallery-container .gallery-3 {
-        transform: translateX(-150px);
-    }
-    .gallery-item { 
-        opacity: 0;
-        transform: translateY(50px); 
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
-    }
-    
-    .gallery-item.show { 
-        opacity: 1;
-        transform: translateY(0);
+    .iframe-map {
+        border-radius:20px; 
+        width: 80%;
+        height: 500px;
     }
 
     .footer-bio {
@@ -543,12 +438,12 @@ main {
 
     .footer-contact {
         width: 150px;
-        font-size: 12px;
+        font-size: 10px;
         padding: 2px;
     }
     
     .footer-about {
-        font-size: 12px;
+        font-size: 10px;
         width: 170px;
         padding: 2px;
         padding-bottom: 5px;

@@ -11,3 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.remove('open');
     });
   });
+
+var prevScrollpos = window.scrollY;
+window.onscroll = function() {
+  var currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("nav").style.top = "0";
+  } else {
+    document.getElementById("nav").style.top = "-10vh";
+  }
+  prevScrollpos = currentScrollPos;
+}

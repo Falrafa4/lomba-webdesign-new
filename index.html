@@ -7,11 +7,6 @@
     <script src="main.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>SidoCrime</title>
-    <style>
-        iframe {
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
@@ -23,7 +18,6 @@
 
         <div class="navbar">
             <ul>
-                <li><a href="#tracking" id="plans">Tracking</a></li>
                 <li><a href="/lomba-webdesign-new/contact/contact.html" id="contact">Contact</a></li>
                 <li><a href="/lomba-webdesign-new/about/about.html" id="about">About</a></li>
             </ul>
@@ -37,7 +31,6 @@
     
             <div class="sidebar-list">
                 <ul>
-                    <li><a href="#tracking" id="plans">Tracking</a></li>
                     <li><a href="/lomba-webdesign-new/contact/contact.html" id="contact">Contact</a></li>
                     <li><a href="/lomba-webdesign-new/about/about.html" id="about">About</a></li>
                 </ul>
@@ -48,10 +41,10 @@
     <header>
         <div class="main-header">
             <div class="header-main">
-                <h1>Welcome</h1>
+                <h1>Welcome to SidoCrime</h1>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, incidunt.</p>
-                <a href="#article" id="learn-more">See More</a>
+                <p>Know Your Area, Stay Aware</p>
+                <a href="#tracking-map" id="learn-more">See Full Tracking Map</a>
             </div>
             <div class="animation-arrow-down"></div>
         </div>
@@ -60,34 +53,18 @@
     <main>
         <article id="article">
             <div class="header-description">
-                <h1>What is Tracking Map?</h1>
+                <h1>What is SidoCrime?</h1>
                 <hr class="header-hr">
-                <p class="article-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur atque exercitationem ex non dolorum ipsam nostrum, suscipit tenetur id qui provident, quisquam explicabo voluptatum beatae quibusdam sint neque corporis perspiciatis minus temporibus accusamus nihil modi delectus. Aperiam et quod consectetur.</p><br>
-                <div class="map" id="tracking">
-                    <iframe height="700" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="SDA-Zona" src="//www.arcgis.com/apps/Embed/index.html?webmap=efbbcc015ca94c94bab45ada7bd858d4&extent=112.339,-7.6995,113.1486,-7.272&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&disable_scroll=false&theme=dark" style="border-radius:20px;"></iframe>
+                <p class="article-content">SidoCrime is a user-friendly website that helps people track and understand crime in Sidoarjo. The website uses simple maps to show where different crimes have happened, making it easy for everyone to see what is going on in their neighborhood. With updated information about recent incidents, SidoCrime allows residents to stay informed about safety in their area. By providing this information, the website aims to help people feel more secure and encourage them to report any suspicious activities. It also works to strengthen the connection between the community and local law enforcement, making it easier for everyone to work together to prevent crime and improve safety for all.</p>
+            </div>
+            <div class="map" id="tracking-map">
+                <h1>Crime Map of Sidoarjo</h1>
+                <figure>
+                    <iframe class="iframe-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="SDA-Zona" src="//www.arcgis.com/apps/Embed/index.html?webmap=efbbcc015ca94c94bab45ada7bd858d4&extent=112.339,-7.6995,113.1486,-7.272&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&disable_scroll=false&theme=dark&disable_zoom=true&disable_pan=true"></iframe>
                     <figcaption>Source: Badan Pusat Statistik</figcaption>
-                </div>
-                
+                </figure>    
             </div>
         </article>
-
-        <!-- <div class="main-gallery">
-            <h1>Gallery</h1>
-            <div class="gallery-container">
-                <div class="gallery-1 gallery-item">
-                  <img src="images/picture-1.jpeg" alt="Image 1">
-                </div>
-
-                <div class="gallery-2 gallery-item">
-                  <img src="images/picture-2.jpeg" alt="Image 2">
-                </div>
-
-                <div class="gallery-3 gallery-item">
-                  <img src="images/picture-3.webp" alt="Image 3">
-                </div>
-            </div>
-            <a href="gallery/gallery.html">See More</a>
-        </div> -->
     </main>
 
     <footer>
@@ -107,6 +84,14 @@
                     <li>
                         <i class="ph ph-facebook-logo"></i>
                         Facebook
+                    </li>
+                    <li>
+                        <i class="ph ph-envelope"></i>
+                        sidocrimecorp@gmail.com
+                    </li>
+                    <li>
+                        <i class="ph ph-map-pin"></i>
+                        456 Oak Avenue, New York, NY 10001, USA
                     </li>
                 </ul>
             </div>
