@@ -149,7 +149,7 @@ nav {
 header {
     color: white;
     background-color: #000f1a;
-    background-image: url(images/header.jpg);
+    background-image: url(../images/header.jpg);
     background-size: cover;
     background-position: center;
 }
