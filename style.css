@@ -14,13 +14,15 @@
 
 nav {
     background-color: transparent;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 100vw;
     transition: top 0.6s;
+    border-bottom: 1px solid rgba(208, 208, 208, 0.196);
+    z-index: 10;
 }
 
 .logo, .navbar {
@@ -86,6 +88,7 @@ nav {
     transition: left 0.3s ease;
     overflow: hidden;
     z-index: 10;
+    border-right: 1px solid rgba(255, 255, 255, 0.359);
 }
 
 .sidebar-header {
@@ -146,7 +149,7 @@ header {
     height: 100vh;
     background-color: #000f1a;
     background-image: url(images/header.jpg);
-    background-size: cover;
+    background-size: 110%;
     background-position: center;
 }
 
@@ -271,7 +274,7 @@ h1 {
 }
 
 main {
-    background-color: rgb(33, 33, 33);
+    background-color: #212121;
     text-align: center;
     padding: 15px;
 }
@@ -305,12 +308,12 @@ figcaption {
 
 .footer-bio {
     text-align: left;
-    background-color: #021526;
+    background-color: #111;
     color: white;
     padding: 30px 100px;
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid rgba(255, 255, 255, 0.422);
+    border-top: 1px solid rgba(255, 255, 255, 0.249);
 }
 
 .footer-bio h3 {
@@ -354,13 +357,19 @@ figcaption {
 
 .footer-copyright {
     color: white;
-    background-color: #021526;
+    background-color: #0a0a0a;
     padding: 20px 0px;
     width: 100%;
     text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
+    nav {
+        backdrop-filter: none;
+        background-color: #111;
+        z-index: 9;
+    }
+
     .logo, .navbar {
         margin: 0 10px;
         padding: 0;
@@ -376,6 +385,10 @@ figcaption {
 
     .navbar {
         display: none;
+    }
+
+    header {
+        background-size: cover;
     }
 
     .toggleSidebar {
