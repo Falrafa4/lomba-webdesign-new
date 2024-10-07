@@ -183,6 +183,7 @@ main {
     line-height: 30px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 50px;
 }
 
@@ -190,7 +191,7 @@ main {
     background-color: #333;
     padding: 20px 2%;
     border-radius: 10px;
-
+    width: 40%;
 }
 
 .contact a {
@@ -199,7 +200,15 @@ main {
     text-decoration: none;
     background-color: white;
     padding: 10px 20px;
+    border: 1px solid black;
     border-radius: 7px;
+    transition: 0.5s;
+}
+
+.contact a:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
 }
 
 .footer-bio {
