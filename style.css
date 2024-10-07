@@ -227,6 +227,7 @@ h1 {
     transition: 1s;
 }
 
+
 .article-content {
     text-align: justify;
 }
@@ -276,7 +277,6 @@ h1 {
 main {
     background-color: #212121;
     text-align: center;
-    padding: 15px;
 }
 
 .header-description a:hover {
@@ -297,6 +297,17 @@ main {
 .map h1 {
     color: white;
     margin: 20px;
+}
+
+.legend {
+    text-align: left;
+    position: absolute;
+    z-index: 10;
+    top: 235%;
+    left: 12%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 figcaption {
@@ -442,6 +453,12 @@ figcaption {
         border-radius:20px; 
         width: 80%;
         height: 500px;
+    }
+
+    .legend {
+        top: 287%;
+        left: 3.5%;
+        transform: scale(0.6);
     }
 
     .footer-bio {
