@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
     <script src="main.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <title>SidoCrime</title>
 </head>
 
 <body>
-    <nav id="nav">
+    <nav>
+        <div class="navbar" id="navbar">
+            <div class="logo">
+                <a href="#"><h1>SidoCrime</h1></a>
+            </div>
+            
+            <div class="navbar-items">
+                <ul>
+                    <li><a href="/lomba-webdesign-new/contact/contact.html" id="contact">Contact</a></li>
+                    <li><a href="/lomba-webdesign-new/about/about.html" id="about">About</a></li>
+                </ul>
+            </div>
+        </div>
+        
         <button class="toggleSidebar" id="toggleSidebar">☰</button>
-        <div class="logo">
-            <a href="#"><h1>SidoCrime</h1></a>
-        </div>
-
-        <div class="navbar">
-            <ul>
-                <li><a href="/lomba-webdesign-new/contact/contact.html" id="contact">Contact</a></li>
-                <li><a href="/lomba-webdesign-new/about/about.html" id="about">About</a></li>
-            </ul>
-        </div>
-
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <h1>Menu</h1>

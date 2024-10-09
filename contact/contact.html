@@ -9,19 +9,21 @@
     <title>SidoCrime</title>
 </head>
 <body>
-    <nav id="nav">
+    <nav>
+        <div class="navbar" id="navbar">
+            <div class="logo">
+                <a href="#"><h1>SidoCrime</h1></a>
+            </div>
+            
+            <div class="navbar-items">
+                <ul>
+                    <li><a href="/lomba-webdesign-new/contact/contact.html" id="contact">Contact</a></li>
+                    <li><a href="/lomba-webdesign-new/about/about.html" id="about">About</a></li>
+                </ul>
+            </div>
+        </div>
+        
         <button class="toggleSidebar" id="toggleSidebar">☰</button>
-        <div class="logo">
-            <a href="../index.html"><h1>SidoCrime</h1></a>
-        </div>
-
-        <div class="navbar">
-            <ul>
-                <li><a href="#" id="contact">Contact</a></li>
-                <li><a href="/lomba-webdesign-new/about/about.html" id="about">About</a></li>
-            </ul>
-        </div>
-
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <h1>Menu</h1>
@@ -30,7 +32,7 @@
     
             <div class="sidebar-list">
                 <ul>
-                    <li><a href="#" id="contact-side">Contact</a></li>
+                    <li><a href="/lomba-webdesign-new/contact/contact.html" id="contact-side">Contact</a></li>
                     <li><a href="/lomba-webdesign-new/about/about.html" id="about-side">About</a></li>
                 </ul>
             </div>
@@ -47,25 +49,30 @@
 
     <main>
         <div class="contact">
-            <div class="contact1">
+            <div class="contact-container contact1">
                 <i class="ph ph-phone-call" style="font-size: 50px;"></i>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ipsa.</p>
                 <a href="tel:+6281234567890">Our Telephone</a>
             </div>
-            <div class="contact2">
+            <div class="contact-container contact2">
                 <i class="ph ph-instagram-logo" style="font-size: 50px;"></i>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ipsa.</p>
                 <a href="https://instagram.com" target="_blank">Our Instagram</a>
             </div>
-            <div class="contact3">
+            <div class="contact-container contact3">
                 <i class="ph ph-facebook-logo" style="font-size: 50px;"></i>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ipsa.</p>
                 <a href="https://facebook.com" target="_blank">Our Facebook</a>
             </div>
-            <div class="contact4">
+            <div class="contact-container contact4">
                 <i class="ph ph-envelope" style="font-size: 50px;"></i>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ipsa.</p>
-                <a href="mailto:sidocrimecorp@gmail.com">Our Email</a>
+                <a href="mailto:sidocrimecorp@gmail.com" target="_blank">Our Email</a>
+            </div>
+            <div class="contact-container contact5">
+                <i class="ph ph-map-pin" style="font-size: 50px;"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, ipsa.</p>
+                <a href="https://maps.google.com/" target="_blank">Our Location</a>
             </div>
         </div>
     </main>

@@ -13,21 +13,25 @@
 }
 
 nav {
+    width: 100vw;
+}
+
+.navbar {
     background-color: transparent;
-    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    width: 100vw;
-    transition: top 0.6s;
-    border-bottom: 1px solid rgba(208, 208, 208, 0.196);
+    top: 0;
+    width: 100%;
+    height: 7vh;
+    transition: top .5s ease;
+    /* border-bottom: 1px solid rgba(208, 208, 208, 0.196); */
     z-index: 10;
 }
 
-.logo, .navbar {
-    margin: 0px 1.5rem;
-    margin-right: 0px;
+.logo {
+    margin: 0 1.5rem;
 }
 
 .logo a {
@@ -42,28 +46,50 @@ nav {
     justify-content: center;
 }
 
-.navbar ul li {
+.navbar-items {
+    margin: 0 1.5rem;
+}
+
+.navbar-items ul li {
     display: flex;
     justify-content: center;
     align-items: center; 
 }
 
-.navbar ul li a {
+.navbar-items ul li a {
     text-decoration: none;
     color: white;
-    width: 7rem;
-    padding: 3vh 0;
+    width: 5rem;
+    margin: 3vh 1vh;
     text-align: center;
+    position: relative;
     transition: all .5s ease;
+    /* border: solid red; */
+}
+
+.navbar-items ul li a:after {    
+    content: "";
+    display: block;
+    height: 3px;
+    bottom: 0;
+    position: relative;
+    left: 50%;
+    background: #f9d502;
+    transition: width 0.3s ease, left 0.3s ease;
+    width: 0;
+}
+
+.navbar-items ul li a:hover:after { 
+    width: 100%; 
+    left: 0; 
 }
 
 .navbar ul li a:hover {
-    background-color: #ffffff;
-    color: black;
+    color: #f9d502;
     transition: all .5s ease;
 }
 
-#about, #about-side {
+#about-side {
     background-color: #ffffff;
     color: black;
 }
@@ -175,22 +201,41 @@ h1 {
 
 main {
     background-color: #212121;
-    padding: 100px;
+    padding: 50px 100px;
     color: white;
+    height: 100%;
+}
+
+.about-description{
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 5px;
+    font-weight: bold;
 }
 
 .about {
     display: flex;
     justify-content: center;
+    padding: 0 50px;
 }
 
-.about1, .about2, .about3 {
+.about-member {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    width: 25%;
+    transition: all .3s;
+    padding: 60px;
+}
+
+.about-member:hover {
+    transform: scale(1.1);
+
+}
+
+.about img {
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .footer-bio {
@@ -198,7 +243,7 @@ main {
     background-color: #111;
     color: white;
     padding: 30px 100px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     border-top: 1px solid rgba(255, 255, 255, 0.249);
 }
@@ -279,7 +324,9 @@ main {
     }
 
     .toggleSidebar {
-        display: block;
+        display: flex;
+        top: 5px;
+        left: 5px;
     }
 
     .sidebar {

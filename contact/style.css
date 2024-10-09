@@ -13,21 +13,25 @@
 }
 
 nav {
+    width: 100vw;
+}
+
+.navbar {
     background-color: transparent;
-    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    width: 100vw;
-    transition: top 0.6s;
-    border-bottom: 1px solid rgba(208, 208, 208, 0.196);
+    top: 0;
+    width: 100%;
+    height: 7vh;
+    transition: top .5s ease;
+    /* border-bottom: 1px solid rgba(208, 208, 208, 0.196); */
     z-index: 10;
 }
 
-.logo, .navbar {
-    margin: 0px 1.5rem;
-    margin-right: 0px;
+.logo {
+    margin: 0 1.5rem;
 }
 
 .logo a {
@@ -42,28 +46,50 @@ nav {
     justify-content: center;
 }
 
-.navbar ul li {
+.navbar-items {
+    margin: 0 1.5rem;
+}
+
+.navbar-items ul li {
     display: flex;
     justify-content: center;
     align-items: center; 
 }
 
-.navbar ul li a {
+.navbar-items ul li a {
     text-decoration: none;
     color: white;
-    width: 7rem;
-    padding: 3vh 0;
+    width: 5rem;
+    margin: 3vh 1vh;
     text-align: center;
+    position: relative;
     transition: all .5s ease;
+    /* border: solid red; */
+}
+
+.navbar-items ul li a:after {    
+    content: "";
+    display: block;
+    height: 3px;
+    bottom: 0;
+    position: relative;
+    left: 50%;
+    background: #f9d502;
+    transition: width 0.3s ease, left 0.3s ease;
+    width: 0;
+}
+
+.navbar-items ul li a:hover:after { 
+    width: 100%; 
+    left: 0; 
 }
 
 .navbar ul li a:hover {
-    background-color: #ffffff;
-    color: black;
+    color: #f9d502;
     transition: all .5s ease;
 }
 
-#contact, #contact-side {
+#contact-side {
     background-color: #ffffff;
     color: black;
 }
@@ -184,14 +210,15 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 25px;
+    justify-content: space-between;
 }
 
-.contact1, .contact2, .contact3, .contact4 {
+.contact-container {
     background-color: #333;
     padding: 20px 2%;
     border-radius: 10px;
-    width: 40%;
+    width: 45%;
 }
 
 .contact a {
@@ -200,15 +227,35 @@ main {
     text-decoration: none;
     background-color: white;
     padding: 10px 20px;
-    border: 1px solid black;
+    border: none;
     border-radius: 7px;
-    transition: 0.5s;
+    transition: all .3s ease-in-out;
 }
 
 .contact a:hover {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.5);
     color: white;
-    border: 1px solid white;
+}
+
+.contact1 {
+    background: linear-gradient(45deg,#409242, #94ff86);
+}
+
+.contact2 {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+
+.contact3 {
+    background: linear-gradient(45deg, #00c6ff 0%,#0072ff 100%);
+}
+
+.contact4 {
+    background: linear-gradient(45deg, #c71610 0%, #3b60c4 100%);
+}
+
+.contact5 {
+    background: linear-gradient(45deg, #2196f3, #4caf50);
+    width: 100%;
 }
 
 .footer-bio {
@@ -216,7 +263,7 @@ main {
     background-color: #111;
     color: white;
     padding: 30px 100px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     border-top: 1px solid rgba(255, 255, 255, 0.249);
 }
@@ -293,7 +340,9 @@ main {
     }
 
     .toggleSidebar {
-        display: block;
+        display: flex;
+        top: 5px;
+        left: 5px;
     }
 
     .sidebar {
@@ -308,6 +357,25 @@ main {
     .header-main h1 {
         font-size: 3rem;
         color: white;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .contact {
+        flex-direction: column;
+        width: 90%;
+        padding: 15px;
+        margin: 20px 0;
+    }
+    
+    .contact-container {
+        width: 99%;
+    }
+
+    .contact-container p {
+        width: 100%;
     }
 
     .footer-bio {
