@@ -115,7 +115,7 @@ nav {
     position: fixed;
     top: 0;
     left: -150px;
-    background-color: #021526;
+    background-color: #212121;
     transition: left 0.3s ease;
     overflow: hidden;
     z-index: 10;
@@ -123,7 +123,7 @@ nav {
 }
 
 .sidebar-header {
-    background-color: #021526;
+    background-color: #212121;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,7 +160,7 @@ nav {
 }
 
 .close-btn {
-    background-color: #021526;
+    background-color: #212121;
     color: white;
     border: hidden;
     font-size: 30px;
