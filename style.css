@@ -236,7 +236,7 @@ h1 {
     text-align: center;
     width: 80%;
     margin: 5vw 10vw;
-    line-height: 40px;
+    line-height: 2.2;
     letter-spacing: 2px;
     color: white;
 }
@@ -483,6 +483,7 @@ figcaption {
     }
 
     .animation-arrow-down {
+        top: 80%;
         left: 48.5%;
     }
 
