@@ -19,7 +19,7 @@ window.onscroll = function() {
     document.getElementById('navbar').style.top = '0';
   }
   if (prevScrollpos < currentScrollPos) {
-    document.getElementById('navbar').style.top = '-7vh';
+    document.getElementById('navbar').style.top = '-13vh';
   }
 
   prevScrollpos = currentScrollPos;

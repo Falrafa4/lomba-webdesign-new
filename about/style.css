@@ -26,8 +26,14 @@ nav {
     width: 100%;
     height: 7vh;
     transition: top .5s ease;
-    /* border-bottom: 1px solid rgba(208, 208, 208, 0.196); */
     z-index: 10;
+}
+
+.navbar-group {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0;
 }
 
 .logo {
@@ -64,7 +70,6 @@ nav {
     text-align: center;
     position: relative;
     transition: all .5s ease;
-    /* border: solid red; */
 }
 
 .navbar-items ul li a:after {    
@@ -74,7 +79,7 @@ nav {
     bottom: 0;
     position: relative;
     left: 50%;
-    background: #f9d502;
+    background: #e6b606;
     transition: width 0.3s ease, left 0.3s ease;
     width: 0;
 }
@@ -85,27 +90,20 @@ nav {
 }
 
 .navbar ul li a:hover {
-    color: #f9d502;
+    color: #e6b606;
     transition: all .5s ease;
 }
 
-#about-side {
-    background-color: #ffffff;
-    color: black;
-}
-
 .toggleSidebar {
-    display: none;
-    padding: 0 5px;
+    padding: 0;
     font-size: 24px;
     background-color: transparent;
     color: white;
     border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    cursor: pointer;  /* Add spacing between logo and toggle button */
     z-index: 9;
+    position: relative;
+    display: none; /* Relative positioning inside the flex container */
 }
 
 .sidebar {
@@ -167,6 +165,11 @@ nav {
     cursor: pointer;
 }
 
+#about-side {
+    background-color: #e6b606;
+    color: black;
+}
+
 .main-header {
     height: 50vh;
     display: flex;
@@ -203,11 +206,9 @@ main {
     background-color: #212121;
     padding: 50px 100px;
     color: white;
-    height: 100%;
 }
 
 .about-description{
-    text-align: center;
     font-size: 24px;
     letter-spacing: 5px;
     font-weight: bold;
@@ -217,6 +218,7 @@ main {
     display: flex;
     justify-content: center;
     padding: 0 50px;
+    overflow-y: hidden;
 }
 
 .about-member {
@@ -297,36 +299,34 @@ main {
 
 @media only screen and (max-width: 768px) {
     nav {
-        backdrop-filter: none;
         background-color: #111;
         z-index: 9;
     }
 
     .logo, .navbar {
-        margin: 0 10px;
+        margin: 0 15px;
         padding: 0;
         font-size: 12px;
     }
 
+    .navbar-group a {
+        font-size: 18px;
+    }
+
     .logo {
+        display: block;
         padding: 10px;
-        font-size: 20px;
-        margin: auto;
+        margin: 0 20vw;
         text-align: center;
     }
 
-    .navbar {
+    .navbar-items {
         display: none;
     }
 
-    header {
-        background-size: cover;
-    }
-
     .toggleSidebar {
-        display: flex;
-        top: 5px;
-        left: 5px;
+        display: block;
+        z-index: 10;
     }
 
     .sidebar {
@@ -344,11 +344,11 @@ main {
     }
 
     main {
-        padding: 10px;
+        padding: 30px 0;
         text-align: center;
     }
     
-    .contact {
+    .about {
         display: flex;
         flex-direction: column;
         align-items: center;
