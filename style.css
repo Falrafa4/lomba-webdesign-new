@@ -100,10 +100,10 @@ nav {
     background-color: transparent;
     color: white;
     border: none;
-    cursor: pointer;  /* Add spacing between logo and toggle button */
+    cursor: pointer;
     z-index: 9;
     position: relative;
-    display: none; /* Relative positioning inside the flex container */
+    display: none;
 }
 
 .sidebar {
@@ -361,8 +361,8 @@ figcaption {
 }
 
 .call-btn:hover {
-    background-color: red; /* A lighter red for hover */
-    transform: scale(1.05); /* Slightly enlarges the button */
+    background-color: red;
+    transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(255, 0, 0, 0.4);
 }
 

@@ -100,10 +100,10 @@ nav {
     background-color: transparent;
     color: white;
     border: none;
-    cursor: pointer;  /* Add spacing between logo and toggle button */
+    cursor: pointer;
     z-index: 9;
     position: relative;
-    display: none; /* Relative positioning inside the flex container */
+    display: none;
 }
 
 .sidebar {
